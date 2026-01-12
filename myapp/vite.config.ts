@@ -6,7 +6,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
   server: {
-    host: "0.0.0.0",              // bind to all network interfaces
-    port: Number(process.env.PORT) || 5173,  // use Render's dynamic port if set
+    host: "0.0.0.0",              
+    port: Number(process.env.PORT) || 5173,
+    allowedHosts: ["ot-1-1e4p.onrender.com"],  // allow this Render URL
   },
 });
